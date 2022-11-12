@@ -1,0 +1,277 @@
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+header {
+  width: 100%; 
+  position: relative;
+  z-index: 10;
+  background: linear-gradient(#00000066, rgba(0, 0, 0, 0.4));
+ 
+}
+
+header .burger {
+  width: 50px;
+  position: absolute;
+  z-index: 20;
+  right: 0;
+  display: none;
+}
+
+header .burger span {
+  display: block;
+  height: 2px;
+  background-color: #e6890b;
+  margin-bottom: 10px;
+}
+
+header #container {
+  width: 80%;
+  max-width: 1200px;
+  height: 100px;
+  margin: 0 auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+header #container > a {
+  font-size: 2rem;
+  line-height: 2.5rem;
+  color: white;
+}
+
+header #container #logo {
+  color: #e6890b;
+}
+
+header ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+header li {
+  margin-left: 50px;
+}
+
+header li a {
+  font-size: 1.5rem;
+  line-height: 2rem;
+  color: #e6890b;
+  font-weight: 500;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+
+header li a::after {
+  content: "";
+  visibility: hidden;
+  display: block;
+  width: 75%;
+  height: 2px;
+  margin-top: 4px;
+  background-color: #e6890b;
+}
+
+header li a:hover::after {
+  visibility: visible;
+}
+
+@media only screen and (max-width: 576px) {
+    header .burger {
+      top: 40px;
+      right: 15px;
+      display: block;
+      -webkit-transition: all 0.5s ease-in-out;
+      transition: all 0.5s ease-in-out;
+      cursor: pointer;
+    }
+    .change #span2 {
+      visibility: hidden;
+    }
+    .change #span1 {
+      -webkit-transform: rotate(45deg);
+              transform: rotate(45deg);
+    }
+    .change #span3 {
+      margin-top: -23px;
+      -webkit-transform: rotate(-45deg);
+              transform: rotate(-45deg);
+    }
+    header #container {
+      -webkit-transition: all 0.5s ease-in-out;
+      transition: all 0.5s ease-in-out;
+      width: 100%;
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+          -ms-flex-direction: column;
+              flex-direction: column;
+      -webkit-box-pack: start;
+          -ms-flex-pack: start;
+              justify-content: flex-start;
+      -webkit-box-align: start;
+          -ms-flex-align: start;
+              align-items: flex-start;
+    }
+    header #container.new {
+      height: 100vh;
+      background-color: #686766;
+      -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+              clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+    }
+    header #container.new ul {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+    }
+    header #container.new ul li a:hover::after {
+      visibility: hidden;
+    }
+    header #container > a {
+      margin-left: 15px;
+      padding-top: 10px;
+    }
+    header #container ul {
+      display: none;
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+          -ms-flex-direction: column;
+              flex-direction: column;
+      -webkit-box-pack: start;
+          -ms-flex-pack: start;
+              justify-content: flex-start;
+      -webkit-box-align: start;
+          -ms-flex-align: start;
+              align-items: flex-start;
+    }
+    header #container ul li {
+      margin-left: 15px;
+      margin-top: 30px;
+    }
+}
+
+@media only screen and (min-width: 577px) and (max-width: 799px) {
+    header .burger {
+      top: 40px;
+      right: 40px;
+      display: block;
+      -webkit-transition: all 0.5s ease-in-out;
+      transition: all 0.5s ease-in-out;
+      cursor: pointer;
+    }
+    .change #span2 {
+      visibility: hidden;
+    }
+    .change #span1 {
+      -webkit-transform: rotate(45deg);
+              transform: rotate(45deg);
+    }
+    .change #span3 {
+      margin-top: -23px;
+      -webkit-transform: rotate(-45deg);
+              transform: rotate(-45deg);
+    }
+    header #container {
+      -webkit-transition: all 0.5s ease-in-out;
+      transition: all 0.5s ease-in-out;
+      width: 100%;
+      
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+          -ms-flex-direction: column;
+              flex-direction: column;
+      -webkit-box-pack: start;
+          -ms-flex-pack: start;
+              justify-content: flex-start;
+      -webkit-box-align: start;
+          -ms-flex-align: start;
+              align-items: flex-start;
+    }
+    header #container.new {
+      height: 100vh;
+      background-color: #686766;
+    }
+    header #container.new ul {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+    }
+    header #container.new ul li a:hover::after {
+      visibility: hidden;
+    }
+    header #container > a {
+      margin-left: 40px;
+      padding-top: 10px;
+    }
+    header #container ul {
+      display: none;
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+          -ms-flex-direction: column;
+              flex-direction: column;
+      -webkit-box-pack: start;
+          -ms-flex-pack: start;
+              justify-content: flex-start;
+      -webkit-box-align: start;
+          -ms-flex-align: start;
+              align-items: flex-start;
+    }
+    header #container ul li {
+      margin-left: 40px;
+      margin-top: 30px;
+    }
+    
+}
+
+@media only screen and (min-width: 800px) and (max-width: 999px) {
+    header #container{
+      width: 90%;
+    }
+}
+
+input {
+    margin-top: 50px;
+    margin-left: 30px;
+    margin-right: 10px;
+    margin-bottom: 10px;
+    padding: 10px;
+}
+input:focus {
+    outline: none;
+}
+.fa-trash.display-none{
+    display: none;
+}
+.fa-trash.display-none.display-block{
+    display: inline-block;
+}
+#list-items li {
+    font-size: 1.5rem;
+    margin-left: 30px;
+    margin-bottom: 10px;
+    margin-right: 10px;
+}
+
+/* 
+#list-items i {
+    margin-left: 10px;
+} 
+*/
